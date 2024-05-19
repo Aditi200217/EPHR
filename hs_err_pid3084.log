@@ -1,0 +1,223 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 132120576 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3528), pid=3084, tid=23448
+#
+# JRE version:  (20.0.2+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.0.2+9-78, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=C:\Users\ADITI\Documents\NetBeansProjects\EPHR\build\classes ephr.services
+
+Host: Intel(R) Core(TM) i5-10300H CPU @ 2.50GHz, 8 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.2070)
+Time: Mon Sep  4 02:24:16 2023 India Standard Time elapsed time: 0.009608 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000020abb885c70):  JavaThread "Unknown thread" [_thread_in_vm, id=23448, stack(0x0000006387900000,0x0000006387a00000)]
+
+Stack: [0x0000006387900000,0x0000006387a00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6bc25a]
+V  [jvm.dll+0x84971a]
+V  [jvm.dll+0x84b315]
+V  [jvm.dll+0x84ba13]
+V  [jvm.dll+0x280e4f]
+V  [jvm.dll+0x6b8fe9]
+V  [jvm.dll+0x6adbca]
+V  [jvm.dll+0x35b165]
+V  [jvm.dll+0x363386]
+V  [jvm.dll+0x3b400e]
+V  [jvm.dll+0x3b4295]
+V  [jvm.dll+0x32b86a]
+V  [jvm.dll+0x32c68b]
+V  [jvm.dll+0x8123df]
+V  [jvm.dll+0x3c1261]
+V  [jvm.dll+0x7fe103]
+V  [jvm.dll+0x44ccaf]
+V  [jvm.dll+0x44e621]
+C  [jli.dll+0x5287]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x126ad]
+C  [ntdll.dll+0x5aa68]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff97ca2b118, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000020abb8e67d0 WorkerThread "GC Thread#0" [stack: 0x0000006387a00000,0x0000006387b00000] [id=8796]
+  0x0000020abb8f73c0 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000006387b00000,0x0000006387c00000] [id=29420]
+  0x0000020abb8f8e40 WorkerThread "G1 Conc#0" [stack: 0x0000006387c00000,0x0000006387d00000] [id=11992]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff97c20eea7]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000020abb882600] Heap_lock - owner thread: 0x0000020abb885c70
+
+Heap address: 0x0000000082800000, size: 2008 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000082800000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff97c5e47b9]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.006 Loaded shared library C:\Program Files\Java\jdk-20\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff60aa60000 - 0x00007ff60aa70000 	C:\Program Files\Java\jdk-20\bin\java.exe
+0x00007ffa52390000 - 0x00007ffa525a4000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa505b0000 - 0x00007ffa50674000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa4fcb0000 - 0x00007ffa50054000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa4fb90000 - 0x00007ffa4fca1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa32510000 - 0x00007ffa3252b000 	C:\Program Files\Java\jdk-20\bin\VCRUNTIME140.dll
+0x00007ffa390b0000 - 0x00007ffa390c9000 	C:\Program Files\Java\jdk-20\bin\jli.dll
+0x00007ffa503e0000 - 0x00007ffa50490000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa50680000 - 0x00007ffa50727000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa501d0000 - 0x00007ffa50276000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa50490000 - 0x00007ffa505a7000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa51860000 - 0x00007ffa51a0a000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa36940000 - 0x00007ffa36bcf000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2070_none_2713e6537381f706\COMCTL32.dll
+0x00007ffa4f980000 - 0x00007ffa4f9a6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa507c0000 - 0x00007ffa507e9000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa4f9b0000 - 0x00007ffa4fac9000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa4f8e0000 - 0x00007ffa4f97a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa486a0000 - 0x00007ffa486aa000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa52140000 - 0x00007ffa52171000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa37de0000 - 0x00007ffa37dec000 	C:\Program Files\Java\jdk-20\bin\vcruntime140_1.dll
+0x00007ffa30df0000 - 0x00007ffa30e7e000 	C:\Program Files\Java\jdk-20\bin\msvcp140.dll
+0x00007ff97bed0000 - 0x00007ff97cb68000 	C:\Program Files\Java\jdk-20\bin\server\jvm.dll
+0x00007ffa367b0000 - 0x00007ffa367b9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa50150000 - 0x00007ffa501c1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa486b0000 - 0x00007ffa486e4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa4e8a0000 - 0x00007ffa4e8b8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa36740000 - 0x00007ffa3674a000 	C:\Program Files\Java\jdk-20\bin\jimage.dll
+0x00007ffa4d140000 - 0x00007ffa4d36e000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa51070000 - 0x00007ffa513fa000 	C:\WINDOWS\System32\combase.dll
+0x00007ffa51a20000 - 0x00007ffa51af7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffa36900000 - 0x00007ffa36932000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa50060000 - 0x00007ffa500da000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa324a0000 - 0x00007ffa324c6000 	C:\Program Files\Java\jdk-20\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-20\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2070_none_2713e6537381f706;C:\Program Files\Java\jdk-20\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 --module-path=C:\Users\ADITI\Documents\NetBeansProjects\EPHR\build\classes 
+java_command: ephr.services
+java_class_path (initial): C:\Users\ADITI\Downloads\mysql-connector-java-8.0.28.jar;C:\Users\ADITI\Downloads\rs2xml (1).jar;C:\Users\ADITI\Documents\NetBeansProjects\EPHR\build\classes
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2105540608                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5839372                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122909434                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122909434                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2105540608                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Users\ADITI\Desktop\New folder\Scripts\;C:\Users\ADITI\Desktop\New folder\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk-20\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\ADITI\AppData\Local\Microsoft\WindowsApps;C:\Users\ADITI\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin;;C:\MinGW\bin;C:\Users\ADITI\AppData\Roaming\npm;C:\Program Files\Java\jdk-20\bin;
+USERNAME=ADITI
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+TMP=C:\Users\ADITI\AppData\Local\Temp
+TEMP=C:\Users\ADITI\AppData\Local\Temp
+
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.2070)
+OS uptime: 1 days 7:16 hours
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 165 stepping 2 microcode 0xe0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, rdtscp, f16c, pku
+
+Memory: 4k page, system-wide physical 8029M (573M free)
+TotalPageFile size 32605M (AvailPageFile size 28M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 60M, peak: 186M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.0.2+9-78) for windows-amd64 JRE (20.0.2+9-78), built on 2023-06-14T10:08:48Z by "mach5one" with MS VC++ 17.1 (VS2022)
+
+END.
